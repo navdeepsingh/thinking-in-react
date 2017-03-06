@@ -93,9 +93,11 @@ class FilterableProductTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      filterText: 'ball',
+      filterText: '',
       inStockOnly: false
     };
+    this.handleFilterTextInput = this.handleFilterTextInput.bind(this);
+    this.handleInStockInput = this.handleInStockInput.bind(this);
   }
 
   handleFilterTextInput(filterText) {
